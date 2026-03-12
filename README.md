@@ -1,96 +1,119 @@
-# 🎮 JRPG Narrative Engine (Godot)
+# PixelRPG-Core 🎮
 
-A lightweight **JRPG-style narrative and dialogue system** built using the **Godot Engine**.
-This project demonstrates how to create **interactive NPC dialogue, narrative branching, and player interaction systems** for pixel RPG games.
+A modular **JRPG-style narrative and quest framework** built using Godot Engine.
+This project demonstrates core systems used in classic role-playing games such as dialogue trees, NPC interaction, quest triggers, and animated player movement.
 
-The engine is designed as a **modular foundation for story-driven RPGs** and can easily be expanded into a full JRPG framework.
+The goal of this project is to build a **lightweight narrative-driven RPG prototype** that can serve as a base for story-focused games.
 
 ---
 
 ## ✨ Features
 
-* 🧍 **NPC Interaction System**
-  Players can interact with NPCs using proximity triggers.
+* 🧍 **Player Controller**
 
-* 💬 **Dynamic Dialogue UI**
-  Custom dialogue box system with text progression.
+  * Top-down RPG movement
+  * Animated sprite movement (up / down / left / right)
 
-* 🔁 **Dialogue Loop / Branching Support**
-  Dialogue can cycle or branch based on narrative logic.
+* 💬 **Dialogue System**
 
-* 📜 **Narrative Manager System**
-  Central script controlling story flow and dialogue triggers.
+  * Branching dialogue tree
+  * Choice-based interactions
+  * NPC interaction system
+  * Dialogue UI framework
 
-* 🎮 **Player Controller**
-  Basic player movement and interaction system.
+* 📜 **Quest System**
 
-* 🧠 **Expandable Architecture**
-  Scripts are modular and designed to support:
+  * Start quests via dialogue
+  * Track quest states
+  * Extendable quest architecture
 
-  * quests
-  * branching storylines
-  * choice systems
-  * cutscenes
+* 🧠 **Narrative Manager**
+
+  * Dialogue graph management
+  * Story node progression
+  * Modular structure for narrative expansion
+
+* 🎮 **RPG Interaction System**
+
+  * Player proximity interaction
+  * NPC triggers
+  * Dialogue progression system
 
 ---
 
-## 🏗 Project Structure
+## 🛠 Tech Stack
+
+* **Engine:** Godot Engine 4.x
+* **Language:** GDScript
+* **Architecture:** Modular node-based game systems
+
+---
+
+## 🗂 Project Structure
 
 ```
-pixel-rpg-core
+PixelRPG-Core
 │
-├── player.gd              # Player movement & interaction
-├── npc.gd                 # NPC interaction logic
-├── narrative_manager.gd   # Narrative control system
-├── dialogue_ui.gd         # Dialogue box UI
-├── canvas_layer.gd        # UI layer control
+├── scenes
+│   ├── world.tscn
+│   ├── player.tscn
+│   └── npc.tscn
 │
-├── player.tscn            # Player scene
-├── world.tscn             # Main game world
-├── canvas_layer.tscn      # UI scene
-├── dialogue_ui.tscn       # Dialogue interface
+├── scripts
+│   ├── player.gd
+│   ├── npc.gd
+│   ├── dialogue_ui.gd
+│   ├── narrative_manager.gd
+│   └── quest_manager.gd
 │
-└── project.godot          # Godot project configuration
+└── assets
 ```
 
 ---
 
-## 🛠 Built With
+## 🎮 Current Gameplay Loop
 
-* **Godot Engine**
-* **GDScript**
-* **Pixel RPG architecture**
-
----
-
-## 🚀 Getting Started
-
-1. Install **Godot Engine**
-2. Clone the repository
-
-```
-git clone https://github.com/r1shav19/JRPG-Narrative-GoDot-Engine.git
-```
-
-3. Open the project in **Godot**
-4. Run the `world.tscn` scene.
+1. Move the player around the map
+2. Interact with NPCs
+3. Trigger dialogue conversations
+4. Choose dialogue options
+5. Start quests through narrative decisions
 
 ---
 
-## 🔮 Future Improvements
+## 🚧 Planned Features
 
-* Dialogue choices system
-* Save / load system
-* Quest manager
-* Cutscene support
-* Inventory system
-* Character portraits in dialogue
+* Quest Log UI
+* Save / Load System
+* Dynamic NPC dialogue based on quest progress
+* JSON-based dialogue scripting
+* Camera follow system
+* Tile-based movement (classic JRPG style)
 
 ---
 
-## 👨‍💻 Author
+## 🎯 Project Goal
 
-Developed by **Rishav**
+This project aims to build a **reusable narrative engine for JRPG-style games**, focusing on:
 
-GitHub:
-https://github.com/r1shav19
+* branching story systems
+* quest-driven gameplay
+* modular RPG architecture
+
+---
+
+## 📷 Prototype Preview
+
+Early development prototype showcasing dialogue interaction and animated movement.
+
+---
+
+## 🤝 Contributions
+
+This project is currently in early development and open to improvements, experimentation, and system expansion.
+
+---
+
+## 📜 License
+
+This project is released under the MIT License.
