@@ -105,6 +105,7 @@ This project aims to build a **reusable narrative engine for JRPG-style games**,
 ## 📷 Prototype Preview
 
 Early development prototype showcasing dialogue interaction and animated movement.
+![Game Preview](Preview_game.png)
 
 ---
 
