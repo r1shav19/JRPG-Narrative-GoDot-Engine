@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bjfgit6lxek06"]
+
+[ext_resource type="Script" uid="uid://byka5lmeerdwl" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://b8vcebutqlc54" path="res://icons8-logan-x-men-32.png" id="2_onrkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+
+[node name="Player" type="CharacterBody2D" unique_id=2000809121]
+position = Vector2(300, 200)
+script = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=796488606]
+scale = Vector2(3, 3)
+texture = ExtResource("2_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=438029648]
+shape = SubResource("RectangleShape2D_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=701145082]

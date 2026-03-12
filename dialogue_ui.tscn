@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cu67j4jmv0iyk"]
+
+[ext_resource type="Script" uid="uid://cb85qngx07ew4" path="res://dialogue_ui.gd" id="1_njptv"]
+
+[node name="DialogueUI" type="CanvasLayer" unique_id=501279420 groups=["var dialogue = get_tree().get_first_node_in_group(\"dialogue\")if dialogue and dialogue.visible:return"]]
+visible = false
+script = ExtResource("1_njptv")
+
+[node name="Panel" type="Panel" parent="." unique_id=1641142500]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -648.0
+offset_bottom = -498.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Panel" unique_id=1462698492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "\"\""
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Choices" type="VBoxContainer" parent="Panel" unique_id=332939260]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
