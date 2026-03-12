@@ -1,28 +1,36 @@
 [gd_scene format=3 uid="uid://t77vm2awgwu"]
 
 [ext_resource type="PackedScene" uid="uid://bjfgit6lxek06" path="res://player.tscn" id="1_f3sb7"]
-[ext_resource type="Texture2D" uid="uid://cixi5nx3anchs" path="res://Sample A.png" id="1_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://dlayela5hhom0" path="res://a9933234-eaa3-4f21-9eee-ecff57a9bd92_thumb.webp" id="1_pkg7o"]
 [ext_resource type="Script" uid="uid://bpoovaai3rdk6" path="res://npc.gd" id="3_aqk2v"]
-[ext_resource type="Texture2D" uid="uid://dy56prj48uj17" path="res://icon.svg" id="4_036b0"]
+[ext_resource type="Texture2D" uid="uid://5dxsgoqs32h1" path="res://dungeons-dragons-pathfinder-roleplaying-game-dwarf-loki-role-playing-game-dwarf-warrior-8bb9e8d73a0523e9d66703ed2c142628.png" id="4_pkg7o"]
 [ext_resource type="PackedScene" uid="uid://cu67j4jmv0iyk" path="res://dialogue_ui.tscn" id="5_036b0"]
 [ext_resource type="Script" uid="uid://cyqsbt6d4ud8o" path="res://narrative_manager.gd" id="6_dwbse"]
+[ext_resource type="Script" uid="uid://cjgpgpc6xhl4" path="res://quest_manager.gd" id="7_pkg7o"]
 
 [node name="World" type="Node2D" unique_id=1811017778]
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=233672000]
-scale = Vector2(4, 4)
-texture = ExtResource("1_fj7yv")
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_pkg7o")
 
 [node name="Player" parent="." unique_id=2000809121 instance=ExtResource("1_f3sb7")]
 position = Vector2(200, 200)
+scale = Vector2(0.4, 0.4)
 
 [node name="NPC" type="CharacterBody2D" parent="." unique_id=340552473]
+position = Vector2(124, 0)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("3_aqk2v")
 
 [node name="Sprite2D" type="Sprite2D" parent="NPC" unique_id=1627644272]
-texture = ExtResource("4_036b0")
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_pkg7o")
 
 [node name="DialogueUI" parent="." unique_id=501279420 groups=["dialogue"] instance=ExtResource("5_036b0")]
 
 [node name="NarrativeManager" type="Node" parent="." unique_id=2102008675 groups=["narrative"]]
 script = ExtResource("6_dwbse")
+
+[node name="QuestManager" type="Node" parent="." unique_id=1741337404]
+script = ExtResource("7_pkg7o")

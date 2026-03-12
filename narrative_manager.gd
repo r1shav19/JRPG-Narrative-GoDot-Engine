@@ -38,7 +38,13 @@ func choose(i):
 	if i >= c.size():
 		return
 
-	current = c[i]["next"]
+	var next = c[i]["next"]
+
+	# QUEST TRIGGER
+	if next == "who":
+		get_parent().get_node("QuestManager").start_quest("help_villager")
+
+	current = next
 
 	show_current()
 
